@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../Firebase.init';
 import { Link } from 'react-router-dom';
+;
 
 const Header = () => {
   const [user] = useAuthState(auth);
@@ -12,7 +13,7 @@ const Header = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <Link className="navbar-brand fw-bold text-info fs-4 ms-lg-4" to="/ ">
+          <Link id="navbar" className="navbar-brand ms-lg-4 " to="/ ">
             Dr. John Carter
           </Link>
           <button
@@ -43,7 +44,7 @@ const Header = () => {
                   Pricing
                 </Link>
               </li>
-              <li className="nav-item ">
+              <li className="nav-item  ">
                 {user ? 
                   <button className="btn btn-danger text-light p-2 rounded" onClick={handleSignOut}>SignOut</button>
                  : 

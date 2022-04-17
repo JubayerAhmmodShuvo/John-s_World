@@ -1,45 +1,50 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
-import { useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import {
+  useSignInWithEmailAndPassword,
+  useSignInWithGithub,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
 import auth from "../../Firebase.init";
-import './Login.css';
-import { useLocation } from "react-router"; 
-  import { ToastContainer, toast } from "react-toastify";
+import "./Login.css";
+import { useLocation } from "react-router";
+import { ToastContainer, toast } from "react-toastify";
 
-  import "react-toastify/dist/ReactToastify.css";
+import "react-toastify/dist/ReactToastify.css";
+
+import github from "../../../src/images/11.png";
+import google from "../../../src/images/12.png";
 
 const Login = () => {
- const [userInfo, setUserInfo] = useState({
-   email: "",
-   password: "",
- });
- const [errors, setErrors] = useState({
-   email: "",
-   password: "",
-   
- });
+  const [userInfo, setUserInfo] = useState({
+    email: "",
+    password: "",
+  });
+  const [errors, setErrors] = useState({
+    email: "",
+    password: "",
+  });
   const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
   const [signInWithGithub, githubUser] = useSignInWithGithub(auth);
 
-   const [signInWithEmailAndPassword, user, loading, hookError] =
-     useSignInWithEmailAndPassword(auth);
-   const navigate = useNavigate();
-   const location = useLocation();
+  const [signInWithEmailAndPassword, user, loading, hookError] =
+    useSignInWithEmailAndPassword(auth);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const from = location.state?.from?.pathname || "/";
-  
 
-   if (user) {
-     navigate(from, { replace: true });
+  if (user) {
+    navigate(from, { replace: true });
   }
-  if(googleUser){
+  if (googleUser) {
     navigate(from, { replace: true });
   }
   if (githubUser) {
     navigate(from, { replace: true });
   }
-  
+
   const handleEmailBlur = (e) => {
     const emailRegex = /\S+@\S+\.\S+/;
     const validEmail = emailRegex.test(e.target.value);
@@ -51,8 +56,6 @@ const Login = () => {
       setErrors({ ...errors, email: "Invalid email" });
       setUserInfo({ ...userInfo, email: "" });
     }
-
-    
   };
   const handlePasswordBlur = (e) => {
     const passwordRegex = /.{6,}/;
@@ -66,18 +69,17 @@ const Login = () => {
       setUserInfo({ ...userInfo, password: "" });
     }
   };
-   const handleUserLogin = (event) => {
-     event.preventDefault();
+  const handleUserLogin = (event) => {
+    event.preventDefault();
 
-     signInWithEmailAndPassword(userInfo.email, userInfo.password);
-   };
+    signInWithEmailAndPassword(userInfo.email, userInfo.password);
+  };
 
-  useEffect(() => { 
-    if(hookError) {
+  useEffect(() => {
+    if (hookError) {
       toast.error(hookError?.message);
     }
   }, [hookError]);
-
 
   return (
     <div className="container">
@@ -129,7 +131,7 @@ const Login = () => {
               Don't have an account?
               <Link
                 to="/register"
-                className="fw-bold p-2 text-decoration-none name"
+                className="fw-bold fs-5 p-2 text-decoration-none text-black name"
               >
                 Signup
               </Link>
@@ -141,8 +143,9 @@ const Login = () => {
         <button
           onClick={() => signInWithGoogle()}
           type="button"
-          class="btn btn-outline-primary w-25 my-4 "
+          class="btn btn-outline-secondary w-25 my-4 "
         >
+          <img className="w-25" src={google} alt="google" />
           Login with Google
         </button>
       </div>
@@ -152,6 +155,7 @@ const Login = () => {
           type="button"
           class="btn btn-outline-secondary w-25 mb-4 "
         >
+          <img className="w-25" src={github} alt="google" />
           Login with Github
         </button>
       </div>
