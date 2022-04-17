@@ -7,13 +7,13 @@ import auth from '../../Firebase.init';
 const Register = () => {
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
-  const [createUserWithEmailAndPassword, user, loading, error] =
+  const [createUserWithEmailAndPassword, user, loading] =
     useCreateUserWithEmailAndPassword(auth);
    const [confirmPassword, setConfirmPassword] = useState("");
    const [error2, setError] = useState("");
    const navigate = useNavigate();
   if (loading) {
-    return <p>Loading...</p>;
+    return <p className="text-center" >Loading...</p>;
   }
   if (user) {
     navigate("/home");
@@ -94,7 +94,7 @@ const Register = () => {
 
         <div className="d-flex justify-content-center mt-3">
           <button type="submit" className="btn btn-primary  ">
-            Login
+            Register
           </button>
         </div>
         <div className="d-flex my-3">
