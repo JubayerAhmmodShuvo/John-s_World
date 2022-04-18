@@ -28,9 +28,9 @@ const ForgotPass = () => {
    
 
   return (
-    <div className="container text-center my-5 border rounded w-50">
+    <div className="container text-center my-5 border rounded w-50 p-lg-5">
       <input
-        className="w-50 mt-5 p-2"
+        className=" w-100 mt-5 p-2"
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}

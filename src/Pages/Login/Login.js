@@ -84,10 +84,10 @@ const Login = () => {
 
   return (
     <div className="container">
-      <div className="container mt-5 d-flex justify-content-center ">
+      <div className="  mt-5 d-flex justify-content-center ">
         <form
           onSubmit={handleUserLogin}
-          className="w-50 border rounded-3 p-lg-5 p-2"
+          className=" border rounded-3 p-lg-5 p-2"
         >
           <h1 className="text-center mt-3 mb-4 name">Login</h1>
           <div className="mb-3  ">
@@ -155,7 +155,7 @@ const Login = () => {
         <button
           onClick={() => signInWithGoogle()}
           type="button"
-          class="btn btn-outline-secondary w-25 my-4 "
+          className="btn btn-outline-secondary size  my-4 "
         >
           <img className="w-25" src={google} alt="google" />
           Login with Google
@@ -165,7 +165,7 @@ const Login = () => {
         <button
           onClick={() => signInWithGithub()}
           type="button"
-          class="btn btn-outline-secondary w-25 mb-4 "
+          className="btn btn-outline-secondary  mb-4 size "
         >
           <img className="w-25" src={github} alt="google" />
           Login with Github

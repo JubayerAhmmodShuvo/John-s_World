@@ -1,6 +1,6 @@
 # John, Your personal dentist.
 
-[John's World](https://john-s-dental-world.web.app/).
+[John's World](https://john-s-dental-world.web.app/)
 
 ## Functionalities
 

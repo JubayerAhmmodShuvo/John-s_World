@@ -70,10 +70,10 @@ const Register = () => {
   
   return (
     <div className="container">
-      <div className="container mt-5 d-flex justify-content-center ">
+      <div className=" mt-5 d-flex justify-content-center ">
         <form
           onSubmit={handleRegister}
-          className="w-50 border rounded-3 p-lg-5 p-2"
+          className=" border rounded-3 p-lg-5 p-2"
         >
           <h1 className="text-center mt-3 mb-4 name">Register</h1>
           <div className="mb-3  ">
@@ -138,7 +138,7 @@ const Register = () => {
         <button
           onClick={() => signInWithGoogle()}
           type="button"
-          class="btn btn-outline-secondary w-25 my-4 "
+          class="btn btn-outline-secondary size my-4 "
         >
           <img className="w-25" src={google} alt="google" />
           Signup with Google
@@ -148,7 +148,7 @@ const Register = () => {
         <button
           onClick={() => signInWithGithub()}
           type="button"
-          class="btn btn-outline-secondary w-25 mb-4 "
+          class="btn btn-outline-secondary size mb-4 "
         >
           <img className="w-25 h-25" src={github} alt="google" />
           Signup with Github
