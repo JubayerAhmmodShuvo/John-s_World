@@ -18,7 +18,7 @@ const CheckOut = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if ((name, email, phone)) {
+    if (email && name && phone) {
       navigate("/thankyou");
     } else {
       alert("Please fill all the fields");
@@ -28,14 +28,14 @@ const CheckOut = () => {
   return (
     <div>
       <div className="container  my-5 border rounded w-50 ">
-        <form>
+        <form onSubmit={handleSubmit} >
           <div className="form-group my-3">
             <input
               onBlur={handleNameBlur}
               type="text"
               className="form-control my-3 "
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              id="exampl"
+              aria-describedby="nameHelp"
               placeholder="Enter Name"
             />
 
@@ -59,7 +59,7 @@ const CheckOut = () => {
           </div>
 
           <button
-            onClick={handleSubmit}
+            
             type="submit"
             className="btn btn-primary my-3 "
           >
