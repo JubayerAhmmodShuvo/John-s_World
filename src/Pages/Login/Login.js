@@ -65,7 +65,7 @@ const Login = () => {
       setUserInfo({ ...userInfo, password: e.target.value });
       setErrors({ ...errors, password: "" });
     } else {
-      setErrors({ ...errors, password: "Password is wrong" });
+      setErrors({ ...errors, password: "Please enter correct password" });
       setUserInfo({ ...userInfo, password: "" });
     }
   };
@@ -115,7 +115,7 @@ const Login = () => {
               id="exampleInputPassword1"
             />
             {errors?.password && (
-              <p className="alert alert-danger mt-3">{errors.password}</p>
+              <p className="alert alert-danger mt-3">{errors?.password}</p>
             )}
           </div>
 
@@ -149,7 +149,7 @@ const Login = () => {
           Login with Google
         </button>
       </div>
-      <div className="text-center">
+      <div className="text-center mb-5">
         <button
           onClick={() => signInWithGithub()}
           type="button"
