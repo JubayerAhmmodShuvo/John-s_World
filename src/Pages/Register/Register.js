@@ -1,10 +1,11 @@
 import React from 'react';
 import { useState } from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from "react-router-dom";
 import auth from '../../Firebase.init';
 import github from "../../../src/images/11.png";
 import google from "../../../src/images/12.png";
+import { sendEmailVerification } from 'firebase/auth';
 
 const Register = () => {
    const [email, setEmail] = useState("");
@@ -15,7 +16,9 @@ const Register = () => {
    const [error2, setError] = useState("");
   const navigate = useNavigate();
    const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
-   const [signInWithGithub, githubUser] = useSignInWithGithub(auth);
+  const [signInWithGithub, githubUser] = useSignInWithGithub(auth);
+
+  
   if (loading) {
     return <p className="text-center" >Loading...</p>;
   }
@@ -28,6 +31,7 @@ const Register = () => {
   if (githubUser) {
     navigate("/home");
   }
+ 
     const handleEmailBlur = (e) => {
       setEmail(e.target.value);
     };
@@ -36,7 +40,15 @@ const Register = () => {
   };
    const handleConfirmPasswordBlur = (e) => {
      setConfirmPassword(e.target.value);
-   };
+  };
+  
+/*   const verifyEmail = () => {
+    sendEmailVerification(auth.currentUser)
+      .then(() => {
+        console.log("Email sent");
+      })
+  } */
+  
    const handleRegister = (e) => {
      e.preventDefault();
     if (password !== confirmPassword) {
@@ -47,7 +59,9 @@ const Register = () => {
       setError("Password must be at least 6 characters");
       return;
     }
-    createUserWithEmailAndPassword(email, password);
+     createUserWithEmailAndPassword(email, password);
+     
+     
 
     setEmail(" ");
     
@@ -104,7 +118,11 @@ const Register = () => {
           <p style={{ color: "red" }}>{error2}</p>
 
           <div className="d-flex justify-content-center mt-3">
-            <button type="submit" className="btn btn-primary  ">
+            <button
+              
+              type="submit"
+              className="btn btn-primary  "
+            >
               Sign Up
             </button>
           </div>

@@ -54,27 +54,27 @@ const Blogs = () => {
             or web applications faster with fewer resources and more efficiency.
             Now, let’s look at some of the services and use of it.
             <ul>
-              <li>1. Hosting: Host applications for free. </li>
+              <li> Hosting: Host applications for free. </li>
               <li>
-                2. Cloud Storage: Cloud Storage is a powerful, simple, and
+                 Cloud Storage: Cloud Storage is a powerful, simple, and
                 cost-effective storage service.
               </li>
               <li>
-                3. Google Analytics: The service provides visualization of all
+                 Google Analytics: The service provides visualization of all
                 this information on just a single tap and helps growing
                 business.
               </li>
-              <li>4. Predictions: This is used for making predictions.</li>
+              <li> Predictions: This is used for making predictions.</li>
               <li>
-                5. Cloud Messaging: For notifications in the mobile application
+                 Cloud Messaging: For notifications in the mobile application
                 it's the best free way.
               </li>
               <li>
-                6. Dynamic Links: This service was called google URL shortener
+                 Dynamic Links: This service was called google URL shortener
                 in the past, but now it is renamed as Dynamic Links.
               </li>
               <li>
-                7. Remote Config: It helps changing application UI and content
+                 Remote Config: It helps changing application UI and content
                 remotely.
               </li>
             </ul>

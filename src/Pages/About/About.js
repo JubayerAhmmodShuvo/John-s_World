@@ -19,7 +19,7 @@ const About = () => {
             have that dedication to give my best effort to overcome any kind of
             difficulties and solve problems. Teamwork is mypersonal strength
             where my innovative ideas can be shared and from where I can gather
-            knowledge for my own.
+            knowledge for my own. 
           </p>
         </div>
       </div>
