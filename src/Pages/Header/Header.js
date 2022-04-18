@@ -44,11 +44,11 @@ const Header = () => {
                   About
                 </Link>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link" to="/checkout ">
                   Checkout
                 </Link>
-              </li>
+              </li> */}
               <li className="nav-item  ">
                 {user ? 
                   <button className="btn btn-danger text-light p-2 rounded" onClick={handleSignOut}>SignOut</button>

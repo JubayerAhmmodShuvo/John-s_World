@@ -6,7 +6,7 @@ const SingleService = ({ services }) => {
   
   return (
     <>
-      <div className="col-lg-4 my-5">
+      <div className="col-lg-4 col-md-6  my-5">
         <div className="card h-100">
           <img src={img} className="card-img-top h-75" alt="..."></img>
           <div className="card-body">
@@ -16,7 +16,7 @@ const SingleService = ({ services }) => {
               Some quick example text to build on the card title and make up the
               bulk of the card's content.
             </p>
-            <Link to=" " className="btn btn-info ">
+            <Link to="/checkout " className="btn btn-info ">
               Take Schedule
             </Link>
           </div>

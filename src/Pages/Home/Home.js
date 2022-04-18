@@ -1,5 +1,6 @@
 import React from 'react';
 import Banner from '../Banner/Banner';
+import GetUpdates from '../GetUpdates/GetUpdates';
 import Services from '../Services/Services';
 
 const Home = () => {
@@ -11,7 +12,10 @@ const Home = () => {
       <div className="container">
      
             <Services />
-          </div>
+      </div>
+      <div className="container">
+        <GetUpdates />
+      </div>
         </div>
       
   );

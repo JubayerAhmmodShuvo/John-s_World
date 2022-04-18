@@ -10,6 +10,8 @@ import CheckOut from './Pages/CheckOut/CheckOut';
 import About from './Pages/About/About';
 import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
+import GetUpdates from './Pages/GetUpdates/GetUpdates';
+import ThankYou from './Pages/ThankYou/ThankYou';
 
 
 
@@ -32,7 +34,8 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogs" element={<Blogs />} />
-
+        <Route path="/getupdates" element={<GetUpdates />} />
+        <Route path="/thankyou" element={<ThankYou />} />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />
