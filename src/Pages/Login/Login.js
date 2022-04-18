@@ -1,5 +1,5 @@
-import React, { useEffect } from "react";
-import { useState } from "react";
+
+import { useEffect, useState } from "react";
 import {
   useSignInWithEmailAndPassword,
   useSignInWithGithub,
@@ -15,6 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import github from "../../../src/images/11.png";
 import google from "../../../src/images/12.png";
+import Loading from "../Loding/Loading";
 
 const Login = () => {
   const [userInfo, setUserInfo] = useState({
@@ -25,6 +26,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+ 
   const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
   const [signInWithGithub, githubUser] = useSignInWithGithub(auth);
   
@@ -33,6 +35,11 @@ const Login = () => {
     useSignInWithEmailAndPassword(auth);
   const navigate = useNavigate();
   const location = useLocation();
+  useEffect(() => {
+    if (hookError) {
+       toast("Invalid Credentials");
+     }
+   }, [hookError]);
 
   const from = location.state?.from?.pathname || "/";
 
@@ -44,6 +51,9 @@ const Login = () => {
   }
   if (githubUser) {
     navigate(from, { replace: true });
+  }
+  if (loading) {
+    return <Loading />;
   }
 
   const handleEmailBlur = (e) => {
@@ -76,11 +86,7 @@ const Login = () => {
     signInWithEmailAndPassword(userInfo.email, userInfo.password);
   };
 
-  useEffect(() => {
-    if (hookError) {
-      toast.error(hookError?.message);
-    }
-  }, [hookError]);
+  
 
   return (
     <div className="container">
@@ -122,7 +128,7 @@ const Login = () => {
 
           <ToastContainer />
 
-          <div className="d-flex justify-content-center mt-3">
+          <div className="d-flex justify-content-center  mt-3">
             <button type="submit" className="btn btn-primary  ">
               Login
             </button>
