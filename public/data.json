@@ -1,0 +1,23 @@
+[
+  {
+    "id": "625cffc1c8c8d1e5fdac9380",
+    "rating": 4,
+    "name": "Root Canal",
+    "img": "https://www.marktangri.com/wp-content/uploads/2021/01/Root-Canal-Treatment-Birmingham-Mark-Tangri-Dental-Excellence.jpg",
+    "price": 4600
+  },
+  {
+    "id": "625cffc1458e11a7b85776f0",
+    "rating": 3,
+    "name": "Dental Crown",
+    "img": "https://cdn-denmk.nitrocdn.com/xXVzNEsKHjBkIyORvLtGPeGnHjNsWVfZ/assets/static/optimized/rev-97f2a4d/wp-content/uploads/2021/02/Dental-Crown-Protection-for-Weak-Tooth-1024x732.jpg",
+    "price": 3000
+  },
+  {
+    "id": "625cffc106da1d81a04fb0cb",
+    "rating": 4,
+    "name": "Deep Clean",
+    "img": "https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/12/dentist-1296x728-header.jpg?w=1575",
+    "price": 2000
+  }
+]
