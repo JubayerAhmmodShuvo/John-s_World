@@ -39,7 +39,7 @@ const ForgotPass = () => {
       <br />
       <ToastContainer />
       <button
-        className="btn btn-outline-primary my-4 "
+        className="btn btn-outline-primary my-4 mb-5 "
         onClick={async () => {
           await sendPasswordResetEmail(email);
           setEmail(" ");
