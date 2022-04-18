@@ -12,6 +12,7 @@ import Blogs from './Pages/Blogs/Blogs';
 import NotFound from './Pages/NotFound/NotFound';
 import GetUpdates from './Pages/GetUpdates/GetUpdates';
 import ThankYou from './Pages/ThankYou/ThankYou';
+import ForgotPass from './Pages/ForgotPass/ForgotPass';
 
 
 
@@ -36,6 +37,7 @@ function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/getupdates" element={<GetUpdates />} />
         <Route path="/thankyou" element={<ThankYou />} />
+        <Route path="/forgotpass" element={<ForgotPass />} />
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
       <Footer />

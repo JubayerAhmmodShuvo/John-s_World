@@ -27,6 +27,7 @@ const Login = () => {
   });
   const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
   const [signInWithGithub, githubUser] = useSignInWithGithub(auth);
+  
 
   const [signInWithEmailAndPassword, user, loading, hookError] =
     useSignInWithEmailAndPassword(auth);
@@ -125,6 +126,17 @@ const Login = () => {
             <button type="submit" className="btn btn-primary  ">
               Login
             </button>
+          </div>
+          <div className="d-flex justify-content-end">
+            <p>
+             
+              <Link
+                className="fw-bold text-decoration-none text-danger "
+                to="/forgotpass"
+              >
+                Forgot Your Password?
+              </Link>
+            </p>
           </div>
           <div className="d-flex my-3">
             <p>

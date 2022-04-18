@@ -1,17 +1,17 @@
 import React from 'react';
 import { useState } from 'react';
-import { useCreateUserWithEmailAndPassword, useSendEmailVerification, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Link, useNavigate } from "react-router-dom";
 import auth from '../../Firebase.init';
 import github from "../../../src/images/11.png";
 import google from "../../../src/images/12.png";
-import { sendEmailVerification } from 'firebase/auth';
+
 
 const Register = () => {
    const [email, setEmail] = useState("");
    const [password, setPassword] = useState("");
   const [createUserWithEmailAndPassword, user, loading] =
-    useCreateUserWithEmailAndPassword(auth);
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification : true});
    const [confirmPassword, setConfirmPassword] = useState("");
    const [error2, setError] = useState("");
   const navigate = useNavigate();
@@ -42,12 +42,7 @@ const Register = () => {
      setConfirmPassword(e.target.value);
   };
   
-/*   const verifyEmail = () => {
-    sendEmailVerification(auth.currentUser)
-      .then(() => {
-        console.log("Email sent");
-      })
-  } */
+
   
    const handleRegister = (e) => {
      e.preventDefault();
@@ -89,7 +84,7 @@ const Register = () => {
               onBlur={handleEmailBlur}
               type="email"
               className="form-control"
-              id="exampleInputEmail1"
+              id="exampleInputEmail17"
               aria-describedby="emailHelp"
             />
           </div>
@@ -101,7 +96,7 @@ const Register = () => {
               onBlur={handlePasswordBlur}
               type="password"
               className="form-control  "
-              id="exampleInputPassword1"
+              id="exampleInputPassword3"
             />
           </div>
           <div className="mb-3">
@@ -112,7 +107,7 @@ const Register = () => {
               onBlur={handleConfirmPasswordBlur}
               type="password"
               className="form-control  "
-              id="exampleInputPassword1"
+              id="exampleInputPassword4"
             />
           </div>
           <p style={{ color: "red" }}>{error2}</p>
