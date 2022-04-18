@@ -1,14 +1,15 @@
 import React from "react";
+import './Blogs.css'
 
 const Blogs = () => {
   return (
-    <div className="container">
+    <div className="container b">
       <div className=" m-4  ">
         <div className="bg-secondary text-light rounded p-5 mb-4">
           <h2 className=" mb-4  ">
             Question 1: Difference between authorization and authentication?
           </h2>
-          <p className=" mb-6 text-justify ">
+          <p className=" mb-6 text-justify blogs  ">
             Authentication is a process of defining that user is correct owner
             of any account, which tries to identify the user before accessing
             the application. Challenges the user to validate credentials (for
@@ -27,7 +28,7 @@ const Blogs = () => {
             Question 2: Why are you using firebase? What other options do you
             have to implement authentication?
           </h2>
-          <p className=" text-justify">
+          <p className=" text-justify blogs">
             Firebase auth has a built in email/password authentication system,
             it also supports OAuth2 for Google, Facebook, Twitter and Github.
             Firebase’s OAuth2 system is well-documented and very easy to
@@ -49,7 +50,7 @@ const Blogs = () => {
             Question 3: What other services does firebase provide other than
             authentication?
           </h2>
-          <p className=" mb-6 text-justify">
+          <p className=" mb-6 text-justify blogs">
             Firebase is a full package that can help in developing your mobile
             or web applications faster with fewer resources and more efficiency.
             Now, let’s look at some of the services and use of it.
