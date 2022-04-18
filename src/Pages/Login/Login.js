@@ -84,7 +84,7 @@ const Login = () => {
 
   return (
     <div className="container">
-      <div className="  mt-5 d-flex justify-content-center ">
+      <div className=" mt-5 d-flex justify-content-center ">
         <form
           onSubmit={handleUserLogin}
           className=" border rounded-3 p-lg-5 p-2"
