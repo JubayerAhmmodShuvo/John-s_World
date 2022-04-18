@@ -1,20 +1,18 @@
-import './App.css';
-import Header from './Pages/Header/Header';
+import "./App.css";
+import Header from "./Pages/Header/Header";
 import { Route, Routes } from "react-router-dom";
-import Home from './Pages/Home/Home';
-import Login from './Pages/Login/Login';
-import Register from './Pages/Register/Register';
-import Footer from './Pages/Footer/Footer';
+import Home from "./Pages/Home/Home";
+import Login from "./Pages/Login/Login";
+import Register from "./Pages/Register/Register";
+import Footer from "./Pages/Footer/Footer";
 import RequireAuth from "./Pages/RequireAuth/RequireAuth";
-import CheckOut from './Pages/CheckOut/CheckOut';
-import About from './Pages/About/About';
-import Blogs from './Pages/Blogs/Blogs';
-import NotFound from './Pages/NotFound/NotFound';
-import GetUpdates from './Pages/GetUpdates/GetUpdates';
-import ThankYou from './Pages/ThankYou/ThankYou';
-import ForgotPass from './Pages/ForgotPass/ForgotPass';
-
-
+import CheckOut from "./Pages/CheckOut/CheckOut";
+import About from "./Pages/About/About";
+import Blogs from "./Pages/Blogs/Blogs";
+import NotFound from "./Pages/NotFound/NotFound";
+import GetUpdates from "./Pages/GetUpdates/GetUpdates";
+import ThankYou from "./Pages/ThankYou/ThankYou";
+import ForgotPass from "./Pages/ForgotPass/ForgotPass";
 
 function App() {
   return (

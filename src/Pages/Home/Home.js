@@ -1,7 +1,7 @@
-import React from 'react';
-import Banner from '../Banner/Banner';
-import GetUpdates from '../GetUpdates/GetUpdates';
-import Services from '../Services/Services';
+import React from "react";
+import Banner from "../Banner/Banner";
+import GetUpdates from "../GetUpdates/GetUpdates";
+import Services from "../Services/Services";
 
 const Home = () => {
   return (
@@ -10,14 +10,12 @@ const Home = () => {
         <Banner />
       </div>
       <div className="container">
-     
-            <Services />
+        <Services />
       </div>
       <div className="container">
         <GetUpdates />
       </div>
-        </div>
-      
+    </div>
   );
 };
 

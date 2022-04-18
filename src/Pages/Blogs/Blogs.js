@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Blogs = () => {
   return (
@@ -56,25 +56,24 @@ const Blogs = () => {
             <ul>
               <li> Hosting: Host applications for free. </li>
               <li>
-                 Cloud Storage: Cloud Storage is a powerful, simple, and
+                Cloud Storage: Cloud Storage is a powerful, simple, and
                 cost-effective storage service.
               </li>
               <li>
-                 Google Analytics: The service provides visualization of all
-                this information on just a single tap and helps growing
-                business.
+                Google Analytics: The service provides visualization of all this
+                information on just a single tap and helps growing business.
               </li>
               <li> Predictions: This is used for making predictions.</li>
               <li>
-                 Cloud Messaging: For notifications in the mobile application
+                Cloud Messaging: For notifications in the mobile application
                 it's the best free way.
               </li>
               <li>
-                 Dynamic Links: This service was called google URL shortener
-                in the past, but now it is renamed as Dynamic Links.
+                Dynamic Links: This service was called google URL shortener in
+                the past, but now it is renamed as Dynamic Links.
               </li>
               <li>
-                 Remote Config: It helps changing application UI and content
+                Remote Config: It helps changing application UI and content
                 remotely.
               </li>
             </ul>

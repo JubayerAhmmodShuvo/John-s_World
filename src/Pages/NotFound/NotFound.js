@@ -4,7 +4,7 @@ import Error from '../../../src/images/notfound.jpg';
 const NotFound = () => {
   return (
     <div>
-      <img className="h-screen w-full " src={Error} alt="" />
+      <img className="img-fluid  " src={Error} alt="" />
     </div>
   );
 };

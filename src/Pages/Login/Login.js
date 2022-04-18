@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import {
   useSignInWithEmailAndPassword,
@@ -26,10 +25,9 @@ const Login = () => {
     email: "",
     password: "",
   });
- 
+
   const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
   const [signInWithGithub, githubUser] = useSignInWithGithub(auth);
-  
 
   const [signInWithEmailAndPassword, user, loading, hookError] =
     useSignInWithEmailAndPassword(auth);
@@ -37,9 +35,9 @@ const Login = () => {
   const location = useLocation();
   useEffect(() => {
     if (hookError) {
-       toast("Invalid Credentials");
-     }
-   }, [hookError]);
+      toast("Invalid Credentials");
+    }
+  }, [hookError]);
 
   const from = location.state?.from?.pathname || "/";
 
@@ -85,8 +83,6 @@ const Login = () => {
 
     signInWithEmailAndPassword(userInfo.email, userInfo.password);
   };
-
-  
 
   return (
     <div className="container">
@@ -135,7 +131,6 @@ const Login = () => {
           </div>
           <div className="d-flex justify-content-end">
             <p>
-             
               <Link
                 className="fw-bold text-decoration-none text-danger "
                 to="/forgotpass"

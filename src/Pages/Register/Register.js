@@ -1,26 +1,28 @@
-import React from 'react';
-import { useState } from 'react';
-import { useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import React from "react";
+import { useState } from "react";
+import {
+  useCreateUserWithEmailAndPassword,
+  useSignInWithGithub,
+  useSignInWithGoogle,
+} from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
-import auth from '../../Firebase.init';
+import auth from "../../Firebase.init";
 import github from "../../../src/images/11.png";
 import google from "../../../src/images/12.png";
 
-
 const Register = () => {
-   const [email, setEmail] = useState("");
-   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [createUserWithEmailAndPassword, user, loading] =
-    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification : true});
-   const [confirmPassword, setConfirmPassword] = useState("");
-   const [error2, setError] = useState("");
+    useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error2, setError] = useState("");
   const navigate = useNavigate();
-   const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
+  const [signInWithGoogle, googleUser] = useSignInWithGoogle(auth);
   const [signInWithGithub, githubUser] = useSignInWithGithub(auth);
 
-  
   if (loading) {
-    return <p className="text-center" >Loading...</p>;
+    return <p className="text-center">Loading...</p>;
   }
   if (user) {
     navigate("/home");
@@ -31,21 +33,19 @@ const Register = () => {
   if (githubUser) {
     navigate("/home");
   }
- 
-    const handleEmailBlur = (e) => {
-      setEmail(e.target.value);
-    };
-    const handlePasswordBlur = (e) => {
-      setPassword(e.target.value);
-  };
-   const handleConfirmPasswordBlur = (e) => {
-     setConfirmPassword(e.target.value);
-  };
-  
 
-  
-   const handleRegister = (e) => {
-     e.preventDefault();
+  const handleEmailBlur = (e) => {
+    setEmail(e.target.value);
+  };
+  const handlePasswordBlur = (e) => {
+    setPassword(e.target.value);
+  };
+  const handleConfirmPasswordBlur = (e) => {
+    setConfirmPassword(e.target.value);
+  };
+
+  const handleRegister = (e) => {
+    e.preventDefault();
     if (password !== confirmPassword) {
       setError("Passwords do not match");
       return;
@@ -54,20 +54,14 @@ const Register = () => {
       setError("Password must be at least 6 characters");
       return;
     }
-     createUserWithEmailAndPassword(email, password);
-     
-     
+    createUserWithEmailAndPassword(email, password);
 
     setEmail(" ");
-    
+
     setPassword(" ");
     setConfirmPassword(" ");
-    
-   };
+  };
 
-
-
-  
   return (
     <div className="container">
       <div className=" mt-5 d-flex justify-content-center ">
@@ -113,11 +107,7 @@ const Register = () => {
           <p style={{ color: "red" }}>{error2}</p>
 
           <div className="d-flex justify-content-center mt-3">
-            <button
-              
-              type="submit"
-              className="btn btn-primary  "
-            >
+            <button type="submit" className="btn btn-primary  ">
               Sign Up
             </button>
           </div>

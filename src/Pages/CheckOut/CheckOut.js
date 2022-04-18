@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
 
 const CheckOut = () => {
-  const [email,setEmail]=useState("");
-  const [name,setName]=useState("");
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const navigate=useNavigate();
+  const navigate = useNavigate();
 
   const handleEmailBlur = (e) => {
     setEmail(e.target.value);
@@ -18,15 +18,12 @@ const CheckOut = () => {
   };
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (name, email, phone) {
-       navigate("/thankyou");
-    }
-    else {
+    if ((name, email, phone)) {
+      navigate("/thankyou");
+    } else {
       alert("Please fill all the fields");
     }
-   
-  }
-
+  };
 
   return (
     <div>

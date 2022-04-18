@@ -1,6 +1,6 @@
 import React from "react";
 import Pic from "../../../src/images/dfe.png";
-import './About.css'
+import "./About.css";
 
 const About = () => {
   return (
@@ -19,7 +19,7 @@ const About = () => {
             have that dedication to give my best effort to overcome any kind of
             difficulties and solve problems. Teamwork is mypersonal strength
             where my innovative ideas can be shared and from where I can gather
-            knowledge for my own. 
+            knowledge for my own.
           </p>
         </div>
       </div>
